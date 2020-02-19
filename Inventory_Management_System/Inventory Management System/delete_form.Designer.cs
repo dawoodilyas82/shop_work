@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(delete_form));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mainDisplay = new System.Windows.Forms.DataGridView();
             this.update_cancel = new System.Windows.Forms.Button();
             this.update_b1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.new_code = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDisplay)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // mainDisplay
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Turquoise;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(292, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(528, 357);
-            this.dataGridView1.TabIndex = 9;
+            this.mainDisplay.BackgroundColor = System.Drawing.Color.Turquoise;
+            this.mainDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mainDisplay.Location = new System.Drawing.Point(292, 12);
+            this.mainDisplay.Name = "mainDisplay";
+            this.mainDisplay.Size = new System.Drawing.Size(663, 435);
+            this.mainDisplay.TabIndex = 9;
             // 
             // update_cancel
             // 
             this.update_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update_cancel.BackgroundImage")));
             this.update_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update_cancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.update_cancel.Location = new System.Drawing.Point(6, 316);
+            this.update_cancel.Location = new System.Drawing.Point(6, 339);
             this.update_cancel.Name = "update_cancel";
             this.update_cancel.Size = new System.Drawing.Size(137, 55);
             this.update_cancel.TabIndex = 8;
@@ -66,7 +66,7 @@
             this.update_b1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update_b1.BackgroundImage")));
             this.update_b1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update_b1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.update_b1.Location = new System.Drawing.Point(149, 316);
+            this.update_b1.Location = new System.Drawing.Point(149, 339);
             this.update_b1.Name = "update_b1";
             this.update_b1.Size = new System.Drawing.Size(137, 55);
             this.update_b1.TabIndex = 7;
@@ -78,7 +78,7 @@
             // 
             this.groupBox1.Controls.Add(this.new_code);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(6, 112);
+            this.groupBox1.Location = new System.Drawing.Point(6, 111);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(280, 121);
             this.groupBox1.TabIndex = 6;
@@ -107,8 +107,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(829, 383);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(958, 449);
+            this.Controls.Add(this.mainDisplay);
             this.Controls.Add(this.update_cancel);
             this.Controls.Add(this.update_b1);
             this.Controls.Add(this.groupBox1);
@@ -117,7 +117,7 @@
             this.MaximizeBox = false;
             this.Name = "delete_form";
             this.Text = "delete_form";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDisplay)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -126,7 +126,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView mainDisplay;
         private System.Windows.Forms.Button update_cancel;
         private System.Windows.Forms.Button update_b1;
         private System.Windows.Forms.GroupBox groupBox1;

@@ -13,11 +13,12 @@ namespace Inventory_Management_System
 {
     public partial class delete_form : Form
     {
-        Inventory5 temp8;
+        DeletionInventory deletionInventory;
         public delete_form()
         {
             InitializeComponent();
-            temp8 = new Inventory5();
+            deletionInventory = new DeletionInventory();
+            mainDisplay.DataSource = deletionInventory.getAllData();
         }
 
         private void update_cancel_Click(object sender, EventArgs e)
@@ -30,12 +31,11 @@ namespace Inventory_Management_System
 
         private void new_code_TextChanged(object sender, EventArgs e)
         {
-
-            dataGridView1.DataSource = temp8.getData(new_code.Text.ToString());
+            mainDisplay.DataSource = deletionInventory.getDataByCode(new_code.Text.ToString());
         }
         private void update_b1_Click(object sender, EventArgs e)
         {
-            bool flag = temp8.DeleteItem(new_code.Text.ToString());
+            bool flag = deletionInventory.DeleteItem(new_code.Text.ToString());
             if (!flag)
             {
                 MessageBox.Show("Item Not Deleted.!");
@@ -51,13 +51,13 @@ namespace Inventory_Management_System
         }
     }
 }
-public class Inventory5
+public class DeletionInventory
 {
-    public Inventory5()
+    public DeletionInventory()
     {
 
     }
-    public DataTable getData(string code)
+    public DataTable getDataByCode(string code)
     {
         OleDbCommand cmd;
         OleDbConnection Conn;
@@ -97,6 +97,48 @@ public class Inventory5
         }
         return null;
     }
+
+    public DataTable getAllData()
+    {
+        OleDbCommand cmd;
+        OleDbConnection Conn;
+        Conn = null;
+        string lStr_ConnString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\gac.accdb";
+        try
+        {
+            if (Conn == null)
+            {
+                Conn = new OleDbConnection(lStr_ConnString);
+                Conn.Open();
+                OleDbDataAdapter lObj;
+                try
+                {
+                    cmd = new OleDbCommand();
+                    cmd.Connection = Conn;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "SELECT code as Filter_Code, description as Description, qty as Quantity, rate_p_p as Rate_per_piece, rate_p_c as Rate_per_Box,category as Category FROM items";
+
+                    DataTable lObj_DtaTbl = new DataTable();
+
+                    lObj = new OleDbDataAdapter(cmd);
+                    lObj.Fill(lObj_DtaTbl);
+                    Conn.Close();
+                    return lObj_DtaTbl;
+
+                }
+                catch (Exception ex1)
+                {
+                    MessageBox.Show(ex1.ToString());
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.ToString());
+        }
+        return null;
+    }
+
     public bool DeleteItem(string code)
     {
         OleDbCommand cmd;
