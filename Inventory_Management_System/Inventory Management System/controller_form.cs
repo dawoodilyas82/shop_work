@@ -13,12 +13,12 @@ namespace Inventory_Management_System
 {
     public partial class controller_form : Form
     {
-        Inventory2 inven;
+        DashboardInventory inven;
         public controller_form()
         {
             InitializeComponent();
-            inven = new Inventory2();
-            dataGridView1.DataSource = inven.getData();
+            inven = new DashboardInventory();
+            dataGridView1.DataSource = inven.getAllData();
         }
 
         private void dash_back_Click(object sender, EventArgs e)
@@ -55,18 +55,28 @@ namespace Inventory_Management_System
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = inven.getData2(textBox1.Text.ToString());
+            dataGridView1.DataSource = inven.getDataByCode(codeBox.Text.ToString());
+        }
+
+        private void descBox_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = inven.getDataByDesc(descBox.Text.ToString());
+        }
+
+        private void catBox_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = inven.getDataByCategory(catBox.Text.ToString());
         }
     }
-    public class Inventory2
+    public class DashboardInventory
     {
         OleDbCommand cmd;
         OleDbConnection Conn;
-        public Inventory2()
+        public DashboardInventory()
         {
             Conn = null;
         }
-        public DataTable getData()
+        public DataTable getAllData()
         {
             string lStr_ConnString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\gac.accdb";
             try
@@ -103,7 +113,7 @@ namespace Inventory_Management_System
             }
             return null;
         }
-        public DataTable getData2(string code)
+        public DataTable getDataByCode(string code)
         {
             OleDbCommand cmd;
             OleDbConnection Conn;
@@ -144,5 +154,85 @@ namespace Inventory_Management_System
             return null;
         }
 
+        public DataTable getDataByDesc(string desc)
+        {
+            OleDbCommand cmd;
+            OleDbConnection Conn;
+            Conn = null;
+            string lStr_ConnString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\gac.accdb";
+            try
+            {
+                if (Conn == null)
+                {
+                    Conn = new OleDbConnection(lStr_ConnString);
+                    Conn.Open();
+                    OleDbDataAdapter lObj;
+                    try
+                    {
+                        cmd = new OleDbCommand();
+                        cmd.Connection = Conn;
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "SELECT code as Filter_Code, description as Description, qty as Quantity, rate_p_p as Rate_per_piece, rate_p_c as Rate_per_Box,category as Category FROM items where description like '%" + desc + "%'";
+
+                        DataTable lObj_DtaTbl = new DataTable();
+
+                        lObj = new OleDbDataAdapter(cmd);
+                        lObj.Fill(lObj_DtaTbl);
+                        Conn.Close();
+                        return lObj_DtaTbl;
+
+                    }
+                    catch (Exception ex1)
+                    {
+                        MessageBox.Show(ex1.ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return null;
+        }
+        public DataTable getDataByCategory(string category)
+        {
+            OleDbCommand cmd;
+            OleDbConnection Conn;
+            Conn = null;
+            string lStr_ConnString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\gac.accdb";
+            try
+            {
+                if (Conn == null)
+                {
+                    Conn = new OleDbConnection(lStr_ConnString);
+                    Conn.Open();
+                    OleDbDataAdapter lObj;
+                    try
+                    {
+                        cmd = new OleDbCommand();
+                        cmd.Connection = Conn;
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "SELECT code as Filter_Code, description as Description, qty as Quantity, rate_p_p as Rate_per_piece, rate_p_c as Rate_per_Box,category as Category FROM items where category like '" + category + "%'";
+
+                        DataTable lObj_DtaTbl = new DataTable();
+
+                        lObj = new OleDbDataAdapter(cmd);
+                        lObj.Fill(lObj_DtaTbl);
+                        Conn.Close();
+                        return lObj_DtaTbl;
+
+                    }
+                    catch (Exception ex1)
+                    {
+                        MessageBox.Show(ex1.ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return null;
+        }
     }
 }
