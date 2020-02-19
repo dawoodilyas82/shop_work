@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newItem_form));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.des = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.category = new System.Windows.Forms.ComboBox();
             this.price_pp = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.quan = new System.Windows.Forms.NumericUpDown();
@@ -41,7 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
-            this.category = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.price_pp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quan)).BeginInit();
@@ -50,6 +52,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.des);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.category);
             this.groupBox1.Controls.Add(this.price_pp);
             this.groupBox1.Controls.Add(this.label6);
@@ -67,9 +71,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Item\'s Details";
             // 
+            // des
+            // 
+            this.des.Location = new System.Drawing.Point(91, 272);
+            this.des.Name = "des";
+            this.des.Size = new System.Drawing.Size(209, 20);
+            this.des.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 228);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Category:";
+            // 
+            // category
+            // 
+            this.category.FormattingEnabled = true;
+            this.category.Location = new System.Drawing.Point(91, 228);
+            this.category.Name = "category";
+            this.category.Size = new System.Drawing.Size(209, 21);
+            this.category.TabIndex = 9;
+            // 
             // price_pp
             // 
             this.price_pp.Location = new System.Drawing.Point(91, 90);
+            this.price_pp.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.price_pp.Name = "price_pp";
             this.price_pp.Size = new System.Drawing.Size(209, 20);
             this.price_pp.TabIndex = 8;
@@ -86,6 +119,11 @@
             // quan
             // 
             this.quan.Location = new System.Drawing.Point(91, 180);
+            this.quan.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.quan.Name = "quan";
             this.quan.Size = new System.Drawing.Size(209, 20);
             this.quan.TabIndex = 6;
@@ -93,6 +131,11 @@
             // price_pc
             // 
             this.price_pc.Location = new System.Drawing.Point(91, 133);
+            this.price_pc.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.price_pc.Name = "price_pc";
             this.price_pc.Size = new System.Drawing.Size(209, 20);
             this.price_pc.TabIndex = 5;
@@ -125,7 +168,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 228);
+            this.label2.Location = new System.Drawing.Point(15, 272);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 1;
@@ -166,17 +209,6 @@
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
-            // category
-            // 
-            this.category.FormattingEnabled = true;
-            this.category.Items.AddRange(new object[] {
-            "Allied",
-            "GAC"});
-            this.category.Location = new System.Drawing.Point(91, 228);
-            this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(209, 21);
-            this.category.TabIndex = 9;
-            // 
             // newItem_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,5 +245,7 @@
         private System.Windows.Forms.NumericUpDown price_pp;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox category;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox des;
     }
 }

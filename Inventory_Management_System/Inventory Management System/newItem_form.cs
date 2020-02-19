@@ -16,28 +16,29 @@ namespace Inventory_Management_System
         public newItem_form()
         {
             InitializeComponent();
+            category.Items.AddRange(new object[] { "Allied", "GAC" });
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Inventory3 new_item_insert = new Inventory3();
-            //int flag = new_item_insert.insertItem(filterCode.Text.ToString(), quan.Text.ToString(), price_pc.Value.ToString(), quan.Value.ToString());
-            //if (flag==0)
-            //{
-            //    MessageBox.Show("Item Already exists in inventory.");
-            //}
-            //else if (flag == -1)
-            //{
-            //    MessageBox.Show("Database is down.");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Item inserted successfully.");
-            //    this.Hide();
-            //    controller_form temp = new controller_form();
-            //    temp.ShowDialog();
-            //    this.Close();
-            //}
+            int flag = new_item_insert.insertItem(filterCode.Text.ToString(),des.Text.ToString(),price_pp.Value.ToString(), price_pc.Value.ToString(), quan.Text.ToString(), category.Text.ToString());
+            if (flag == 0)
+            {
+                MessageBox.Show("Item Already exists in inventory.");
+            }
+            else if (flag == -1)
+            {
+                MessageBox.Show("Database is down.");
+            }
+            else
+            {
+                MessageBox.Show("Item inserted successfully.");
+                this.Hide();
+                controller_form temp = new controller_form();
+                temp.ShowDialog();
+                this.Close();
+            }
         }
 
         private void Cancel_Click(object sender, EventArgs e)
