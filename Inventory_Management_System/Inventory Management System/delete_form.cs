@@ -62,7 +62,7 @@ public class Inventory5
         OleDbCommand cmd;
         OleDbConnection Conn;
         Conn = null;
-        string lStr_ConnString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\data.accdb";
+        string lStr_ConnString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\gac.accdb";
         try
         {
             if (Conn == null)
@@ -75,7 +75,7 @@ public class Inventory5
                     cmd = new OleDbCommand();
                     cmd.Connection = Conn;
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT * FROM items where item_code like '" + code + "%'";
+                    cmd.CommandText = "SELECT code as Filter_Code, description as Description, qty as Quantity, rate_p_p as Rate_per_piece, rate_p_c as Rate_per_Box,category as Category FROM items where code like '" + code + "%'";
 
                     DataTable lObj_DtaTbl = new DataTable();
 
@@ -102,7 +102,7 @@ public class Inventory5
         OleDbCommand cmd;
         OleDbConnection Conn;
         Conn = null;
-        string lStr_ConnString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\data.accdb";
+        string lStr_ConnString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\gac.accdb";
         try
         {
             if (Conn == null)
@@ -114,7 +114,7 @@ public class Inventory5
                     cmd = new OleDbCommand();
                     cmd.Connection = Conn;
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "Delete * FROM items where item_code='" + code + "'";
+                    cmd.CommandText = "Delete * FROM items where code='" + code + "'";
                     cmd.ExecuteNonQuery();
                     Conn.Close();
                     return true;
@@ -122,13 +122,13 @@ public class Inventory5
                 }
                 catch (Exception ex1)
                 {
-                    MessageBox.Show(ex1.ToString());
+                    MessageBox.Show("Something Went Wrong");
                 }
             }
         }
         catch (Exception ex)
         {
-            MessageBox.Show(ex.ToString());
+            MessageBox.Show("Something Went Wrong");
         }
         return false;
     }

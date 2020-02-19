@@ -43,9 +43,9 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Turquoise;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(367, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(292, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(453, 357);
+            this.dataGridView1.Size = new System.Drawing.Size(528, 357);
             this.dataGridView1.TabIndex = 9;
             // 
             // update_cancel
@@ -53,7 +53,7 @@
             this.update_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update_cancel.BackgroundImage")));
             this.update_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update_cancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.update_cancel.Location = new System.Drawing.Point(6, 197);
+            this.update_cancel.Location = new System.Drawing.Point(6, 316);
             this.update_cancel.Name = "update_cancel";
             this.update_cancel.Size = new System.Drawing.Size(137, 55);
             this.update_cancel.TabIndex = 8;
@@ -66,7 +66,7 @@
             this.update_b1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update_b1.BackgroundImage")));
             this.update_b1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update_b1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.update_b1.Location = new System.Drawing.Point(223, 197);
+            this.update_b1.Location = new System.Drawing.Point(149, 316);
             this.update_b1.Name = "update_b1";
             this.update_b1.Size = new System.Drawing.Size(137, 55);
             this.update_b1.TabIndex = 7;
@@ -78,16 +78,16 @@
             // 
             this.groupBox1.Controls.Add(this.new_code);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(6, 12);
+            this.groupBox1.Location = new System.Drawing.Point(6, 112);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(354, 121);
+            this.groupBox1.Size = new System.Drawing.Size(280, 121);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Item\'s Details";
             // 
             // new_code
             // 
-            this.new_code.Location = new System.Drawing.Point(107, 56);
+            this.new_code.Location = new System.Drawing.Point(47, 56);
             this.new_code.Name = "new_code";
             this.new_code.Size = new System.Drawing.Size(209, 20);
             this.new_code.TabIndex = 12;
@@ -96,7 +96,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 59);
+            this.label1.Location = new System.Drawing.Point(6, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 8;
@@ -112,7 +112,9 @@
             this.Controls.Add(this.update_cancel);
             this.Controls.Add(this.update_b1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "delete_form";
             this.Text = "delete_form";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
