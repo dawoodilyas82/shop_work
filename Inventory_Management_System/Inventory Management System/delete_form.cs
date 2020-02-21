@@ -24,7 +24,7 @@ namespace Inventory_Management_System
         private void update_cancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            controller_form temp7 = new controller_form();
+            Dashboard_form temp7 = new Dashboard_form();
             temp7.ShowDialog();
             this.Close();
         }
@@ -44,7 +44,7 @@ namespace Inventory_Management_System
             {
                 MessageBox.Show("Item Deleted.!!");
                 this.Hide();
-                controller_form temp6 = new controller_form();
+                Dashboard_form temp6 = new Dashboard_form();
                 temp6.ShowDialog();
                 this.Close();
             }

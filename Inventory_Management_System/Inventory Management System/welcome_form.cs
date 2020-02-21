@@ -30,7 +30,7 @@ namespace Inventory_Management_System
             else
             {
                 this.Hide();
-                controller_form form2 = new controller_form();
+                Dashboard_form form2 = new Dashboard_form();
                 form2.ShowDialog();
                 this.Close();
             }

@@ -44,12 +44,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.update_cancel = new System.Windows.Forms.Button();
             this.update_b1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mainDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.price_pp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.price_pc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -210,16 +210,16 @@
             this.update_b1.TabIndex = 3;
             this.update_b1.Text = "Update";
             this.update_b1.UseVisualStyleBackColor = true;
-            this.update_b1.Click += new System.EventHandler(this.update_b1_Click);
+            this.update_b1.Click += new System.EventHandler(this.updateButtonClick);
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Turquoise;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(383, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(596, 488);
-            this.dataGridView1.TabIndex = 5;
+            this.mainDataGridView.BackgroundColor = System.Drawing.Color.Turquoise;
+            this.mainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mainDataGridView.Location = new System.Drawing.Point(383, 12);
+            this.mainDataGridView.Name = "dataGridView1";
+            this.mainDataGridView.Size = new System.Drawing.Size(596, 488);
+            this.mainDataGridView.TabIndex = 5;
             // 
             // update_item
             // 
@@ -227,7 +227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(991, 512);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.mainDataGridView);
             this.Controls.Add(this.update_cancel);
             this.Controls.Add(this.update_b1);
             this.Controls.Add(this.groupBox1);
@@ -239,7 +239,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.price_pp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.price_pc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,7 +249,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button update_cancel;
         private System.Windows.Forms.Button update_b1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView mainDataGridView;
         private System.Windows.Forms.TextBox des;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox category;

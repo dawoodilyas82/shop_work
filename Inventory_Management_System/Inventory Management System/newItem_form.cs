@@ -35,7 +35,7 @@ namespace Inventory_Management_System
             {
                 MessageBox.Show("Item inserted successfully.");
                 this.Hide();
-                controller_form temp = new controller_form();
+                Dashboard_form temp = new Dashboard_form();
                 temp.ShowDialog();
                 this.Close();
             }
@@ -44,7 +44,7 @@ namespace Inventory_Management_System
         private void Cancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            controller_form temp2 = new controller_form();
+            Dashboard_form temp2 = new Dashboard_form();
             temp2.ShowDialog();
             this.Close();
         }

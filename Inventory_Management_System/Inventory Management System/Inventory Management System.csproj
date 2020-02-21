@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="controller_form.cs">
+    <Compile Include="Dashboard_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controller_form.Designer.cs">
-      <DependentUpon>controller_form.cs</DependentUpon>
+    <Compile Include="Dashboard_form.Designer.cs">
+      <DependentUpon>Dashboard_form.cs</DependentUpon>
     </Compile>
     <Compile Include="delete_form.cs">
       <SubType>Form</SubType>
@@ -61,6 +61,7 @@
     <Compile Include="delete_form.Designer.cs">
       <DependentUpon>delete_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model.cs" />
     <Compile Include="newItem_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,14 +76,15 @@
     <Compile Include="update_item.Designer.cs">
       <DependentUpon>update_item.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\DatabaseUtil.cs" />
     <Compile Include="welcome_form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="welcome_form.Designer.cs">
       <DependentUpon>welcome_form.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="controller_form.resx">
-      <DependentUpon>controller_form.cs</DependentUpon>
+    <EmbeddedResource Include="Dashboard_form.resx">
+      <DependentUpon>Dashboard_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="delete_form.resx">
       <DependentUpon>delete_form.cs</DependentUpon>
