@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace Inventory_Management_System.Utilities
 {
-    class DatabaseUtil
+    static class DatabaseUtil
     {
-        private string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\gac.accdb";
+        private static string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\gac.accdb";
 
-        public DataTable fetchDataQuery(string query)
+        public static DataTable fetchDataQuery(string query)
         {
             try
             {
@@ -38,7 +38,7 @@ namespace Inventory_Management_System.Utilities
                 return null;
             }
         }
-        public bool CommandExecutionQuery(string query)
+        public static bool CommandExecutionQuery(string query)
         {
             try
             {
@@ -51,6 +51,32 @@ namespace Inventory_Management_System.Utilities
                 command.ExecuteNonQuery();
                 connection.Close();
                 return true;
+
+            }
+            catch (Exception ex1)
+            {
+                return false;
+            }
+        }
+        public static bool doesRecordExistAgainstQuery(string query)
+        {
+            try
+            {
+                OleDbConnection connection = new OleDbConnection(connectionString);
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandType = CommandType.Text;
+                command.CommandText = query;
+
+                OleDbDataReader obj = command.ExecuteReader();
+                if (obj.HasRows)
+                {
+                    connection.Close();
+                    return true;
+                }
+                connection.Close();
+                return false;
 
             }
             catch (Exception ex1)

@@ -49,48 +49,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard_form.cs">
+    <Compile Include="Views\Dashboard_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard_form.Designer.cs">
+    <Compile Include="Views\Dashboard_form.Designer.cs">
       <DependentUpon>Dashboard_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="delete_form.cs">
+    <Compile Include="Views\Delete_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="delete_form.Designer.cs">
-      <DependentUpon>delete_form.cs</DependentUpon>
+    <Compile Include="Views\Delete_form.Designer.cs">
+      <DependentUpon>Delete_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model.cs" />
-    <Compile Include="newItem_form.cs">
+    <Compile Include="Model\InventoryModel.cs" />
+    <Compile Include="Views\New_item_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="newItem_form.Designer.cs">
-      <DependentUpon>newItem_form.cs</DependentUpon>
+    <Compile Include="Views\New_item_form.Designer.cs">
+      <DependentUpon>New_item_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="update_item.cs">
+    <Compile Include="Views\update_item.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="update_item.Designer.cs">
+    <Compile Include="Views\update_item.Designer.cs">
       <DependentUpon>update_item.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\DatabaseUtil.cs" />
-    <Compile Include="welcome_form.cs">
+    <Compile Include="Utilities\GeneralUtils.cs" />
+    <Compile Include="Views\welcome_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="welcome_form.Designer.cs">
+    <Compile Include="Views\welcome_form.Designer.cs">
       <DependentUpon>welcome_form.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Dashboard_form.resx">
+    <EmbeddedResource Include="Views\Dashboard_form.resx">
       <DependentUpon>Dashboard_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="delete_form.resx">
-      <DependentUpon>delete_form.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Delete_form.resx">
+      <DependentUpon>Delete_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newItem_form.resx">
-      <DependentUpon>newItem_form.cs</DependentUpon>
+    <EmbeddedResource Include="Views\New_item_form.resx">
+      <DependentUpon>New_item_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,10 +103,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="update_item.resx">
+    <EmbeddedResource Include="Views\update_item.resx">
       <DependentUpon>update_item.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="welcome_form.resx">
+    <EmbeddedResource Include="Views\welcome_form.resx">
       <DependentUpon>welcome_form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -123,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
