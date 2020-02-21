@@ -5,7 +5,7 @@ namespace Inventory_Management_System
 {
     public static class InventoryModel
     {
-        private static string genericDataFetchQuery = "SELECT code as Filter_Code, description as Description, qty as Quantity, rate_p_p as Rate_per_piece, rate_p_c as Rate_per_Box,category as Category FROM items";
+        private static string genericDataFetchQuery = "SELECT code as "+ Constants.FILTER_CODE + ", description as " + Constants.DESCRIPTION + ", qty as " + Constants.QUANTITY + ", rate_p_p as " + Constants.RATE_PER_PIECE + ", rate_p_c as " + Constants.RATE_PER_BOX + ", category as " + Constants.CATEGORY + " FROM items";
         public static DataTable getDataByCode(string code){
             return DatabaseUtil.fetchDataQuery(genericDataFetchQuery + " where code like '" + code + "%'");
         }

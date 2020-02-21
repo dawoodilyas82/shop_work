@@ -46,9 +46,9 @@ namespace Inventory_Management_System
                 DataTable dataTable = InventoryModel.getDataByCode(filterCode.Text.ToString());
                 DataRow dataRow = dataTable.Rows[0];
 
-                string quantity = (string)dataRow["Quantity"];
-                string rate_pp = (string)dataRow["Rate_per_piece"];
-                string rate_pc = (string)dataRow["Rate_per_Box"];
+                string quantity = (string)dataRow[Constants.QUANTITY];
+                string rate_pp = (string)dataRow[Constants.RATE_PER_PIECE];
+                string rate_pc = (string)dataRow[Constants.RATE_PER_BOX];
 
                 decimal output;
                 if (decimal.TryParse(quantity, out output))
@@ -65,8 +65,8 @@ namespace Inventory_Management_System
                 }
 
 
-                des.Text = (String) dataRow["Description"];
-                category.Text = (string)dataRow["Category"];
+                des.Text = (String) dataRow[Constants.DESCRIPTION];
+                category.Text = (string)dataRow[Constants.CATEGORY];
             } 
         }
     }
