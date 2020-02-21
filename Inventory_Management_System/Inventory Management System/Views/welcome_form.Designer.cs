@@ -125,6 +125,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "welcome_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WELCOME TO INVENTORY MANAGEMENT SYSTEM";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

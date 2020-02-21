@@ -212,12 +212,12 @@
             this.update_b1.UseVisualStyleBackColor = true;
             this.update_b1.Click += new System.EventHandler(this.updateButtonClick);
             // 
-            // dataGridView1
+            // mainDataGridView
             // 
             this.mainDataGridView.BackgroundColor = System.Drawing.Color.Turquoise;
             this.mainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mainDataGridView.Location = new System.Drawing.Point(383, 12);
-            this.mainDataGridView.Name = "dataGridView1";
+            this.mainDataGridView.Name = "mainDataGridView";
             this.mainDataGridView.Size = new System.Drawing.Size(596, 488);
             this.mainDataGridView.TabIndex = 5;
             // 
@@ -233,6 +233,7 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "update_item";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Item";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

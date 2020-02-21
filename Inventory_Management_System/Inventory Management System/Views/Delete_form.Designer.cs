@@ -39,12 +39,12 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // mainDisplay
+            // mainDataGridView
             // 
             this.mainDataGridView.BackgroundColor = System.Drawing.Color.Turquoise;
             this.mainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mainDataGridView.Location = new System.Drawing.Point(292, 12);
-            this.mainDataGridView.Name = "mainDisplay";
+            this.mainDataGridView.Name = "mainDataGridView";
             this.mainDataGridView.Size = new System.Drawing.Size(663, 435);
             this.mainDataGridView.TabIndex = 9;
             // 
@@ -102,7 +102,7 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Code:";
             // 
-            // delete_form
+            // Delete_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,7 +115,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "delete_form";
+            this.Name = "Delete_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "delete_form";
             ((System.ComponentModel.ISupportInitialize)(this.mainDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
