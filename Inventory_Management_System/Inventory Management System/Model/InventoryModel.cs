@@ -1,30 +1,24 @@
 ﻿using Inventory_Management_System.Utilities;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Inventory_Management_System
 {
     public static class InventoryModel
     {
+        private static string genericDataFetchQuery = "SELECT code as Filter_Code, description as Description, qty as Quantity, rate_p_p as Rate_per_piece, rate_p_c as Rate_per_Box,category as Category FROM items";
         public static DataTable getDataByCode(string code){
-            return DatabaseUtil.fetchDataQuery("SELECT code as Filter_Code, description as Description, qty as Quantity, rate_p_p as Rate_per_piece, rate_p_c as Rate_per_Box,category as Category FROM items where code like '" + code + "%'");
+            return DatabaseUtil.fetchDataQuery(genericDataFetchQuery + " where code like '" + code + "%'");
         }
         public static DataTable getDataByDesc(string desc)
         {
-            return DatabaseUtil.fetchDataQuery("SELECT code as Filter_Code, description as Description, qty as Quantity, rate_p_p as Rate_per_piece, rate_p_c as Rate_per_Box,category as Category FROM items where description like '%" + desc + "%'");
+            return DatabaseUtil.fetchDataQuery(genericDataFetchQuery + " where description like '%" + desc + "%'");
         }
         public static DataTable getDataByCategory(string category)
         {
-            return DatabaseUtil.fetchDataQuery("SELECT code as Filter_Code, description as Description, qty as Quantity, rate_p_p as Rate_per_piece, rate_p_c as Rate_per_Box,category as Category FROM items where category like '" + category + "%'");
+            return DatabaseUtil.fetchDataQuery(genericDataFetchQuery + " where category like '" + category + "%'");
         }
         public static DataTable getAllData(){
-            return DatabaseUtil.fetchDataQuery("SELECT code as Filter_Code, description as Description, qty as Quantity, rate_p_p as Rate_per_piece, rate_p_c as Rate_per_Box,category as Category FROM items");
+            return DatabaseUtil.fetchDataQuery(genericDataFetchQuery);
         }
         public static bool insertData(string code, string des, string rate_pp, string rate_pc, string quan, string category)
         {

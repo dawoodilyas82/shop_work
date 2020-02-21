@@ -9,7 +9,7 @@ namespace Inventory_Management_System
         public Delete_form()
         {
             InitializeComponent();
-            mainDisplay.DataSource = InventoryModel.getAllData();
+            mainDataGridView.DataSource = InventoryModel.getAllData();
         }
 
         private void deleteCancelClick(object sender, EventArgs e)
@@ -19,7 +19,7 @@ namespace Inventory_Management_System
 
         private void filterCodeTextChanged(object sender, EventArgs e)
         {
-            mainDisplay.DataSource = InventoryModel.getDataByCode(new_code.Text.ToString());
+            mainDataGridView.DataSource = InventoryModel.getDataByCode(new_code.Text.ToString());
         }
         private void deleteButtonClick(object sender, EventArgs e)
         {
