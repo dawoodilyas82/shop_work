@@ -42,9 +42,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.mainDataGridView = new System.Windows.Forms.DataGridView();
             this.update_cancel = new System.Windows.Forms.Button();
             this.update_b1 = new System.Windows.Forms.Button();
-            this.mainDataGridView = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.price_pp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quan)).BeginInit();
@@ -54,6 +55,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.des);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.category);
@@ -186,6 +188,15 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Code:";
             // 
+            // mainDataGridView
+            // 
+            this.mainDataGridView.BackgroundColor = System.Drawing.Color.Turquoise;
+            this.mainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mainDataGridView.Location = new System.Drawing.Point(383, 12);
+            this.mainDataGridView.Name = "mainDataGridView";
+            this.mainDataGridView.Size = new System.Drawing.Size(596, 488);
+            this.mainDataGridView.TabIndex = 5;
+            // 
             // update_cancel
             // 
             this.update_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update_cancel.BackgroundImage")));
@@ -212,14 +223,18 @@
             this.update_b1.UseVisualStyleBackColor = true;
             this.update_b1.Click += new System.EventHandler(this.updateButtonClick);
             // 
-            // mainDataGridView
+            // button1
             // 
-            this.mainDataGridView.BackgroundColor = System.Drawing.Color.Turquoise;
-            this.mainDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.mainDataGridView.Location = new System.Drawing.Point(383, 12);
-            this.mainDataGridView.Name = "mainDataGridView";
-            this.mainDataGridView.Size = new System.Drawing.Size(596, 488);
-            this.mainDataGridView.TabIndex = 5;
+            this.button1.AutoEllipsis = true;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Inventory_Management_System.Properties.Resources.download;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(323, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 20);
+            this.button1.TabIndex = 24;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.LoadDataButtonClick);
             // 
             // update_item
             // 
@@ -263,5 +278,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

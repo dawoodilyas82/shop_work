@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Inventory_Management_System.Utilities;
+using System.Data;
 
 namespace Inventory_Management_System
 {
@@ -36,6 +37,37 @@ namespace Inventory_Management_System
                 MessageBox.Show("Item Updated.");
                 GeneralUtils.showDashboardForm(this);
             }
+        }
+
+        private void LoadDataButtonClick(object sender, EventArgs e)
+        {
+            if (InventoryModel.doesRecordExist(filterCode.Text.ToString()))
+            {
+                DataTable dataTable = InventoryModel.getDataByCode(filterCode.Text.ToString());
+                DataRow dataRow = dataTable.Rows[0];
+
+                string quantity = (string)dataRow["Quantity"];
+                string rate_pp = (string)dataRow["Rate_per_piece"];
+                string rate_pc = (string)dataRow["Rate_per_Box"];
+
+                decimal output;
+                if (decimal.TryParse(quantity, out output))
+                {
+                    quan.Value = output;
+                }
+                if (decimal.TryParse(rate_pc, out output))
+                {
+                    price_pc.Value = output;
+                }
+                if (decimal.TryParse(rate_pp, out output))
+                {
+                    price_pp.Value = output;
+                }
+
+
+                des.Text = (String) dataRow["Description"];
+                category.Text = (string)dataRow["Category"];
+            } 
         }
     }
 }
