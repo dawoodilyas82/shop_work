@@ -30,62 +30,126 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(update_item));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.quantityToAdd = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.quantityToSub = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.des = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.category = new System.Windows.Forms.ComboBox();
             this.price_pp = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.quan = new System.Windows.Forms.NumericUpDown();
             this.price_pc = new System.Windows.Forms.NumericUpDown();
             this.filterCode = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.currentQuantity = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.mainDataGridView = new System.Windows.Forms.DataGridView();
             this.update_cancel = new System.Windows.Forms.Button();
             this.update_b1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.current_quan = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityToAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityToSub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.price_pp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.price_pc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.current_quan);
+            this.groupBox1.Controls.Add(this.quantityToAdd);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.quantityToSub);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.des);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.category);
             this.groupBox1.Controls.Add(this.price_pp);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.quan);
             this.groupBox1.Controls.Add(this.price_pc);
             this.groupBox1.Controls.Add(this.filterCode);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.currentQuantity);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(22, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(354, 353);
+            this.groupBox1.Size = new System.Drawing.Size(354, 403);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Item\'s Details";
             // 
+            // quantityToAdd
+            // 
+            this.quantityToAdd.Location = new System.Drawing.Point(120, 220);
+            this.quantityToAdd.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.quantityToAdd.Name = "quantityToAdd";
+            this.quantityToAdd.Size = new System.Drawing.Size(196, 20);
+            this.quantityToAdd.TabIndex = 28;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(31, 222);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 13);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Added Quantity:";
+            // 
+            // quantityToSub
+            // 
+            this.quantityToSub.Location = new System.Drawing.Point(141, 262);
+            this.quantityToSub.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.quantityToSub.Name = "quantityToSub";
+            this.quantityToSub.Size = new System.Drawing.Size(175, 20);
+            this.quantityToSub.TabIndex = 26;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(31, 264);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 13);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Subtracted Quantity:";
+            // 
+            // button1
+            // 
+            this.button1.AutoEllipsis = true;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Inventory_Management_System.Properties.Resources.download;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(323, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 20);
+            this.button1.TabIndex = 24;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.LoadDataButtonClick);
+            // 
             // des
             // 
-            this.des.Location = new System.Drawing.Point(107, 273);
+            this.des.Location = new System.Drawing.Point(100, 348);
             this.des.Name = "des";
-            this.des.Size = new System.Drawing.Size(209, 20);
+            this.des.Size = new System.Drawing.Size(216, 20);
             this.des.TabIndex = 23;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 229);
+            this.label3.Location = new System.Drawing.Point(31, 304);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 22;
@@ -94,21 +158,21 @@
             // category
             // 
             this.category.FormattingEnabled = true;
-            this.category.Location = new System.Drawing.Point(107, 229);
+            this.category.Location = new System.Drawing.Point(92, 304);
             this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(209, 21);
+            this.category.Size = new System.Drawing.Size(224, 21);
             this.category.TabIndex = 21;
             // 
             // price_pp
             // 
-            this.price_pp.Location = new System.Drawing.Point(107, 91);
+            this.price_pp.Location = new System.Drawing.Point(92, 91);
             this.price_pp.Maximum = new decimal(new int[] {
             1000000000,
             0,
             0,
             0});
             this.price_pp.Name = "price_pp";
-            this.price_pp.Size = new System.Drawing.Size(209, 20);
+            this.price_pp.Size = new System.Drawing.Size(224, 20);
             this.price_pp.TabIndex = 20;
             // 
             // label6
@@ -120,46 +184,34 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Unit Price:";
             // 
-            // quan
-            // 
-            this.quan.Location = new System.Drawing.Point(107, 181);
-            this.quan.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.quan.Name = "quan";
-            this.quan.Size = new System.Drawing.Size(209, 20);
-            this.quan.TabIndex = 18;
-            // 
             // price_pc
             // 
-            this.price_pc.Location = new System.Drawing.Point(107, 134);
+            this.price_pc.Location = new System.Drawing.Point(92, 134);
             this.price_pc.Maximum = new decimal(new int[] {
             1000000000,
             0,
             0,
             0});
             this.price_pc.Name = "price_pc";
-            this.price_pc.Size = new System.Drawing.Size(209, 20);
+            this.price_pc.Size = new System.Drawing.Size(224, 20);
             this.price_pc.TabIndex = 17;
             // 
             // filterCode
             // 
-            this.filterCode.Location = new System.Drawing.Point(107, 50);
+            this.filterCode.Location = new System.Drawing.Point(92, 50);
             this.filterCode.Name = "filterCode";
-            this.filterCode.Size = new System.Drawing.Size(209, 20);
+            this.filterCode.Size = new System.Drawing.Size(224, 20);
             this.filterCode.TabIndex = 16;
             this.filterCode.TextChanged += new System.EventHandler(this.filterCodeTextChanged);
             // 
-            // label4
+            // currentQuantity
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 183);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Quantity:";
+            this.currentQuantity.AutoSize = true;
+            this.currentQuantity.Location = new System.Drawing.Point(31, 183);
+            this.currentQuantity.Name = "currentQuantity";
+            this.currentQuantity.Size = new System.Drawing.Size(89, 13);
+            this.currentQuantity.TabIndex = 15;
+            this.currentQuantity.Text = "Current Quantity: ";
             // 
             // label5
             // 
@@ -173,7 +225,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 273);
+            this.label2.Location = new System.Drawing.Point(31, 348);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 13;
@@ -202,7 +254,7 @@
             this.update_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update_cancel.BackgroundImage")));
             this.update_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update_cancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.update_cancel.Location = new System.Drawing.Point(56, 411);
+            this.update_cancel.Location = new System.Drawing.Point(58, 436);
             this.update_cancel.Name = "update_cancel";
             this.update_cancel.Size = new System.Drawing.Size(137, 55);
             this.update_cancel.TabIndex = 4;
@@ -215,7 +267,7 @@
             this.update_b1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("update_b1.BackgroundImage")));
             this.update_b1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update_b1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.update_b1.Location = new System.Drawing.Point(199, 411);
+            this.update_b1.Location = new System.Drawing.Point(201, 436);
             this.update_b1.Name = "update_b1";
             this.update_b1.Size = new System.Drawing.Size(137, 55);
             this.update_b1.TabIndex = 3;
@@ -223,18 +275,16 @@
             this.update_b1.UseVisualStyleBackColor = true;
             this.update_b1.Click += new System.EventHandler(this.updateButtonClick);
             // 
-            // button1
+            // current_quan
             // 
-            this.button1.AutoEllipsis = true;
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Inventory_Management_System.Properties.Resources.download;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(323, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 20);
-            this.button1.TabIndex = 24;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.LoadDataButtonClick);
+            this.current_quan.BackColor = System.Drawing.Color.White;
+            this.current_quan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.current_quan.Location = new System.Drawing.Point(120, 174);
+            this.current_quan.Name = "current_quan";
+            this.current_quan.Size = new System.Drawing.Size(196, 22);
+            this.current_quan.TabIndex = 29;
+            this.current_quan.Text = "0";
+            this.current_quan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // update_item
             // 
@@ -252,8 +302,9 @@
             this.Text = "Update Item";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityToAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityToSub)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.price_pp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.price_pc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -271,13 +322,17 @@
         private System.Windows.Forms.ComboBox category;
         private System.Windows.Forms.NumericUpDown price_pp;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown quan;
         private System.Windows.Forms.NumericUpDown price_pc;
         private System.Windows.Forms.TextBox filterCode;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label currentQuantity;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown quantityToAdd;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown quantityToSub;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label current_quan;
     }
 }

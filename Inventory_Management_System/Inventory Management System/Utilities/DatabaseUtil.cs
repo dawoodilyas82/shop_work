@@ -7,7 +7,9 @@ namespace Inventory_Management_System.Utilities
 {
     static class DatabaseUtil
     {
-        private static string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + @"\gac.accdb";
+        static string dbPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "gac.accdb");
+        
+        private static string connectionString = String.Format("Provider=Microsoft.ACE.OLEDB.12.0; Data Source= {0}", dbPath);
 
         public static DataTable fetchDataQuery(string query)
         {

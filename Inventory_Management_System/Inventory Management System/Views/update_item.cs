@@ -27,7 +27,18 @@ namespace Inventory_Management_System
 
         private void updateButtonClick(object sender, EventArgs e)
         {
-            bool hasUpdatedData = InventoryModel.updateData(filterCode.Text.ToString(), des.Text.ToString(), price_pp.Value.ToString(), price_pc.Value.ToString(), quan.Text.ToString(), category.Text.ToString());
+            string currentQuantity = current_quan.Text.ToString();
+            decimal addedQuantity = quantityToAdd.Value;
+            decimal deletedQuantity = quantityToSub.Value;
+
+            bool hasUpdatedData = false;
+            decimal output;
+            if (decimal.TryParse(currentQuantity, out output))
+            {
+                decimal newQuantity = output + addedQuantity - deletedQuantity;
+                hasUpdatedData = InventoryModel.updateData(filterCode.Text.ToString(), des.Text.ToString(), price_pp.Value.ToString(), price_pc.Value.ToString(), newQuantity.ToString(), category.Text.ToString());
+            }
+            
             if(!hasUpdatedData)
             {
                 MessageBox.Show("Something went wrong. Item Not updated");
@@ -51,10 +62,6 @@ namespace Inventory_Management_System
                 string rate_pc = (string)dataRow[Constants.RATE_PER_BOX];
 
                 decimal output;
-                if (decimal.TryParse(quantity, out output))
-                {
-                    quan.Value = output;
-                }
                 if (decimal.TryParse(rate_pc, out output))
                 {
                     price_pc.Value = output;
@@ -64,8 +71,8 @@ namespace Inventory_Management_System
                     price_pp.Value = output;
                 }
 
-
-                des.Text = (String) dataRow[Constants.DESCRIPTION];
+                current_quan.Text = (string)dataRow[Constants.QUANTITY];
+                des.Text = (string) dataRow[Constants.DESCRIPTION];
                 category.Text = (string)dataRow[Constants.CATEGORY];
             } 
         }
