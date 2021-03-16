@@ -27,7 +27,6 @@ D:\shop_work\Inventory_Management_System\Inventory Management System\bin\Debug\I
 D:\shop_work\Inventory_Management_System\Inventory Management System\bin\Debug\Inventory Management System.application
 D:\shop_work\Inventory_Management_System\Inventory Management System\bin\Debug\Inventory Management System.exe
 D:\shop_work\Inventory_Management_System\Inventory Management System\bin\Debug\Inventory Management System.pdb
-D:\shop_work\Inventory_Management_System\Inventory Management System\bin\Debug\MySql.Data.DLL
 D:\shop_work\Inventory_Management_System\Inventory Management System\bin\Debug\Google.Protobuf.dll
 D:\shop_work\Inventory_Management_System\Inventory Management System\bin\Debug\Renci.SshNet.dll
 D:\shop_work\Inventory_Management_System\Inventory Management System\bin\Debug\BouncyCastle.Crypto.dll
@@ -35,3 +34,16 @@ D:\shop_work\Inventory_Management_System\Inventory Management System\obj\Debug\I
 D:\shop_work\Inventory_Management_System\Inventory Management System\obj\Debug\Inventory Management System.application
 D:\shop_work\Inventory_Management_System\Inventory Management System\obj\Debug\Inventory Management System.exe
 D:\shop_work\Inventory_Management_System\Inventory Management System\obj\Debug\Inventory Management System.pdb
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Debug\Inventory Management System.csprojAssemblyReference.cache
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Debug\Inventory Management System.csproj.CoreCompileInputs.cache
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Debug\Inventory Management System.csproj.CopyComplete
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Debug\MySql.Data.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Debug\Zstandard.Net.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Debug\Ubiety.Dns.Core.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Debug\System.Buffers.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Debug\K4os.Compression.LZ4.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Debug\K4os.Hash.xxHash.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Debug\MySql.Data.xml
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Debug\Inventory Management System.exe.config

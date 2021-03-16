@@ -49,10 +49,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>106A661929EDD897B5A210FBB2EF181C6B6FFC42</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>A203DCAA87A4568D6F1D0958CB8A40941F599912</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Inventory Management System_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Inventory Management System_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -61,9 +61,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data">
-      <HintPath>C:\Users\dawoo\Downloads\MySql.Data.DLL</HintPath>
-    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -138,6 +136,7 @@
     <EmbeddedResource Include="Views\welcome_form.resx">
       <DependentUpon>welcome_form.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Inventory Management System_1_TemporaryKey.pfx" />
     <None Include="Inventory Management System_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

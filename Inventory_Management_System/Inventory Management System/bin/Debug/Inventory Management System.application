@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Inventory Management System.exe.manifest" size="6274">
+    <dependentAssembly dependencyType="install" codebase="Inventory Management System.exe.manifest" size="11129">
       <assemblyIdentity name="Inventory Management System.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ifp9vpNrTFKsh8vEuW6GzW38gf8BtC8iwwu7jVbSiQY=</dsig:DigestValue>
+        <dsig:DigestValue>hwEynblORsBDFK7N6IfX9P0p/06T6M7JakZRrklZmrg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
