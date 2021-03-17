@@ -75,7 +75,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utilities\Constants.cs" />
+    <Compile Include="Utilities\LabelConstants.cs" />
+    <Compile Include="Utilities\DBConstants.cs" />
     <Compile Include="Views\Dashboard_form.cs">
       <SubType>Form</SubType>
     </Compile>

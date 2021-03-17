@@ -34,17 +34,23 @@ namespace Inventory_Management_System
 
         private void filterCodeTextChanged(object sender, EventArgs e)
         {
+            descBox.Text = "";
+            companyBox.Text = "";
             mainDataGridView.DataSource = InventoryModel.getDataByCode(codeBox.Text.ToString());
         }
 
         private void descriptionBoxTextChanged(object sender, EventArgs e)
         {
+            codeBox.Text = "";
+            companyBox.Text = "";
             mainDataGridView.DataSource = InventoryModel.getDataByDesc(descBox.Text.ToString());
         }
 
         private void categoryBoxTextChanged(object sender, EventArgs e)
         {
-            mainDataGridView.DataSource = InventoryModel.getDataByCategory(catBox.Text.ToString());
+            descBox.Text = "";
+            codeBox.Text = "";
+            mainDataGridView.DataSource = InventoryModel.getDataByCompany(companyBox.Text.ToString());
         }
     }
 }

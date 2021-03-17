@@ -63,6 +63,7 @@ namespace Inventory_Management_System.Utilities
                 databaseConnection.Close();
                 return false;
             }catch (Exception ex1){
+                MessageBox.Show(ex1.ToString());
                 return false;
             }
         }

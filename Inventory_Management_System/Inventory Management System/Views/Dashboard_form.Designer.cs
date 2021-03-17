@@ -38,7 +38,7 @@
             this.codeBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.catBox = new System.Windows.Forms.TextBox();
+            this.companyBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.descBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.mainDataGridView)).BeginInit();
@@ -135,7 +135,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.catBox);
+            this.groupBox1.Controls.Add(this.companyBox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.descBox);
             this.groupBox1.Controls.Add(this.label1);
@@ -158,11 +158,11 @@
             // 
             // catBox
             // 
-            this.catBox.Location = new System.Drawing.Point(108, 138);
-            this.catBox.Name = "catBox";
-            this.catBox.Size = new System.Drawing.Size(140, 20);
-            this.catBox.TabIndex = 10;
-            this.catBox.TextChanged += new System.EventHandler(this.categoryBoxTextChanged);
+            this.companyBox.Location = new System.Drawing.Point(108, 138);
+            this.companyBox.Name = "catBox";
+            this.companyBox.Size = new System.Drawing.Size(140, 20);
+            this.companyBox.TabIndex = 10;
+            this.companyBox.TextChanged += new System.EventHandler(this.categoryBoxTextChanged);
             // 
             // label2
             // 
@@ -217,7 +217,7 @@
         private System.Windows.Forms.TextBox codeBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox catBox;
+        private System.Windows.Forms.TextBox companyBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox descBox;
     }

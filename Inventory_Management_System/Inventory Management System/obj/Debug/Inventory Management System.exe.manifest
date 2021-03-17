@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Inventory Management System.exe" size="8648136">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Inventory Management System.exe" size="8649160">
       <assemblyIdentity name="Inventory Management System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DUmElg1fdusv2V0QOAhZ+SiuuO5t0SsfE5sYyvDeQdQ=</dsig:DigestValue>
+        <dsig:DigestValue>gVbaDSf4ZCQNTprT77NbXihXJbPqPfdN5paMEX6tuVg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -57,12 +57,12 @@ namespace Inventory_Management_System
                 DataTable dataTable = InventoryModel.getDataByCode(filterCode.Text.ToString());
                 DataRow dataRow = dataTable.Rows[0];
 
-                string quantity = (string)dataRow[Constants.QUANTITY];
-                string rate_pp = (string)dataRow[Constants.RATE_PER_PIECE];
-                string rate_pc = (string)dataRow[Constants.RATE_PER_BOX];
+                string quantity = dataRow[LabelConstants.QUANTITY].ToString();
+                string rate_pp = dataRow[LabelConstants.RATE_PER_PIECE].ToString();
+                string items_per_box = dataRow[LabelConstants.ITEMS_PER_BOX].ToString();
 
                 decimal output;
-                if (decimal.TryParse(rate_pc, out output))
+                if (decimal.TryParse(items_per_box, out output))
                 {
                     price_pc.Value = output;
                 }
@@ -71,9 +71,9 @@ namespace Inventory_Management_System
                     price_pp.Value = output;
                 }
 
-                current_quan.Text = (string)dataRow[Constants.QUANTITY];
-                des.Text = (string) dataRow[Constants.DESCRIPTION];
-                category.Text = (string)dataRow[Constants.CATEGORY];
+                current_quan.Text = dataRow[LabelConstants.QUANTITY].ToString();
+                des.Text = (string) dataRow[LabelConstants.DESCRIPTION];
+                category.Text = (string)dataRow[LabelConstants.Company];
             } 
         }
     }
