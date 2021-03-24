@@ -1,0 +1,32 @@
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\Inventory Management System.exe.config
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\Inventory Management System.exe.manifest
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\Inventory Management System.application
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\Inventory Management System.exe
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\Inventory Management System.pdb
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\MySql.Data.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\Google.Protobuf.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\Zstandard.Net.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\K4os.Compression.LZ4.Streams.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\BouncyCastle.Crypto.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\Ubiety.Dns.Core.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\Renci.SshNet.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\System.Buffers.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\K4os.Compression.LZ4.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\K4os.Hash.xxHash.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\bin\Release\MySql.Data.xml
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory Management System.csprojAssemblyReference.cache
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory Management System.exe.config
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory_Management_System.Dashboard_form.resources
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory_Management_System.Delete_form.resources
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory_Management_System.New_item_form.resources
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory_Management_System.Properties.Resources.resources
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory_Management_System.update_item.resources
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory_Management_System.welcome_form.resources
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory Management System.csproj.GenerateResource.cache
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory Management System.csproj.CoreCompileInputs.cache
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory Management System.exe.manifest
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory Management System.application
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory Management System.csproj.CopyComplete
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory Management System.exe
+D:\Shop_Work\Inventory_Management_System\Inventory Management System\obj\Release\Inventory Management System.pdb

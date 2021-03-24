@@ -36,7 +36,7 @@ namespace Inventory_Management_System
             if (decimal.TryParse(currentQuantity, out output))
             {
                 decimal newQuantity = output + addedQuantity - deletedQuantity;
-                hasUpdatedData = InventoryModel.updateData(filterCode.Text.ToString(), des.Text.ToString(), price_pp.Value.ToString(), price_pc.Value.ToString(), newQuantity.ToString(), category.Text.ToString());
+                hasUpdatedData = InventoryModel.updateData(filterCode.Text.ToString(), des.Text.ToString(), price_pp.Value.ToString(), items_in_box.Value.ToString(), newQuantity.ToString(), category.Text.ToString());
             }
             
             if(!hasUpdatedData)
@@ -52,7 +52,7 @@ namespace Inventory_Management_System
 
         private void LoadDataButtonClick(object sender, EventArgs e)
         {
-            if (InventoryModel.doesRecordExist(filterCode.Text.ToString()))
+            if (!string.IsNullOrEmpty(filterCode.Text.ToString()) && InventoryModel.doesRecordExist(filterCode.Text.ToString()))
             {
                 DataTable dataTable = InventoryModel.getDataByCode(filterCode.Text.ToString());
                 DataRow dataRow = dataTable.Rows[0];
@@ -64,7 +64,7 @@ namespace Inventory_Management_System
                 decimal output;
                 if (decimal.TryParse(items_per_box, out output))
                 {
-                    price_pc.Value = output;
+                    items_in_box.Value = output;
                 }
                 if (decimal.TryParse(rate_pp, out output))
                 {
@@ -74,6 +74,7 @@ namespace Inventory_Management_System
                 current_quan.Text = dataRow[LabelConstants.QUANTITY].ToString();
                 des.Text = (string) dataRow[LabelConstants.DESCRIPTION];
                 category.Text = (string)dataRow[LabelConstants.Company];
+                filterCode.Enabled = false;
             } 
         }
     }
