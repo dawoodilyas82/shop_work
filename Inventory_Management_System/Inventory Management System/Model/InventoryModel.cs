@@ -14,6 +14,10 @@ namespace Inventory_Management_System
                                                         {DBConstants.Company} as {LabelConstants.Company} 
                                                         FROM {DBConstants.ITEMS_TABLE}";
 
+        public static DataTable getDataForCode(string code)
+        {
+            return DatabaseUtil.fetchDataQuery($@"{genericDataFetchQuery} where {DBConstants.CODE} = '{code}'");
+        }
         public static DataTable getDataByCode(string code)
         {
             return DatabaseUtil.fetchDataQuery($@"{genericDataFetchQuery} where {DBConstants.CODE} like '{code}%'");

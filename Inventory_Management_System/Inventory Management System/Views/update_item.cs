@@ -54,10 +54,9 @@ namespace Inventory_Management_System
         {
             if (!string.IsNullOrEmpty(filterCode.Text.ToString()) && InventoryModel.doesRecordExist(filterCode.Text.ToString()))
             {
-                DataTable dataTable = InventoryModel.getDataByCode(filterCode.Text.ToString());
+                DataTable dataTable = InventoryModel.getDataForCode(filterCode.Text.ToString());
                 DataRow dataRow = dataTable.Rows[0];
 
-                string quantity = dataRow[LabelConstants.QUANTITY].ToString();
                 string rate_pp = dataRow[LabelConstants.RATE_PER_PIECE].ToString();
                 string items_per_box = dataRow[LabelConstants.ITEMS_PER_BOX].ToString();
 
